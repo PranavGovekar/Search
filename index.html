@@ -32,7 +32,7 @@
         }
 
         function search_name() {
-            var index = new Array();
+            var result = new Array();
             var res = "";
             var str = document.getElementById("name").value;
             var items = new Array();
@@ -43,17 +43,22 @@
                 return false;
             }
 
-            var re = new RegExp(str, 'gi');
+            const tokens = str.split(" ")
+            let num_tokens = tokens.length;
 
-            for (let i = 0; i < name.length; i++) {
-
-                // res = res + ", " +  name[i].match(re);
-
-                if (name[i].match(re) != null) {
-                    index.push(i);
+            for(let i = 0; i < num_tokens; i++) {
+                var re = new RegExp(tokens[i], 'gi');
+                var temp_index = new Array();
+                for (let i = 0; i < name.length; i++) {
+                    if (name[i].match(re) != null) {
+                        temp_index.push(i);
+                    }
                 }
-            }
-
+                result.push(temp_index);
+                }
+            
+            index = result.reduce((a, b) => a.filter(c => b.includes(c)));
+    
             for (let i = 0; i < index.length; i++) {
 
                 // console.log();
