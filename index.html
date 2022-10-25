@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Search</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <script>
+
         function loadTableData(items) {
             var Table = document.getElementById("testBody");
             Table.innerHTML = "";
@@ -21,6 +22,8 @@
                 name.innerHTML = item.name;
                 let address = row.insertCell(2);
                 address.innerHTML = item.address;
+                let polling = row.insertCell(3);
+                polling.innerHTML = item.poll;
             });
         }
 
@@ -35,7 +38,7 @@
             var str = document.getElementById("name").value;
             var items = new Array();
 
-            if(str=="" || str.length==1) {
+            if (str == "" || str.length == 1) {
                 alert("Enter your name");
                 document.myform.name.focus();
                 return false;
@@ -54,16 +57,116 @@
 
             for (let i = 0; i < index.length; i++) {
 
-                console.log();
-                console.log(index[i] + 1)
-                console.log(name[index[i]]);
-                console.log(address[index[i]]);
+                // console.log();
+                // console.log(index[i] + 1)
+                // console.log(name[index[i]]);
+                // console.log(address[index[i]]);
 
                 var item = new Object()
 
                 item.sr = index[i] + 1
                 item.name = name[index[i]]
                 item.address = address[index[i]]
+                
+                if (item.sr > 0 && item.sr <= 11693) {
+                    item.poll = "Polling Center 1 Kolhapur Siber College"
+                }
+                else if (item.sr > 11693 && item.sr <= 15795) {
+                    item.poll = "Polling Center 2 Kolhapur Shahaji College"
+                }
+                else if (item.sr > 15795 && item.sr <= 17660) {
+                    item.poll = "Polling Center 3 Kolhapur Commerce College"
+                }
+                else if (item.sr > 17660 && item.sr <= 19547) {
+                    item.poll = "Polling Center 4 Ichalkaranji DKTE College"
+                }
+                else if (item.sr > 19547 && item.sr <= 20358) {
+                    item.poll = "Polling Center 5 Gargoti Jawadekar College"
+                }
+                else if (item.sr > 20358 && item.sr <= 21121) {
+                    item.poll = "Polling Center 6 Nipani Devchand College"
+                }
+                else if (item.sr > 21121 && item.sr <= 23778) {
+                    item.poll = "Polling Center 7 Gadhinglaj Shivraj College"
+                }
+                else if (item.sr > 23778 && item.sr <= 24282) {
+                    item.poll = "Polling Center 8 Jaysingpur Jaysingpur College"
+                }
+                else if (item.sr > 24282 && item.sr <= 24904) {
+                    item.poll = "Polling Center 9 Warananagar Warana College"
+                }
+                else if (item.sr > 24904 && item.sr <= 25340) {
+                    item.poll = "Polling Center 10 Peth-Vadgaon BR Ambedkar College"
+                }
+                else if (item.sr > 25340 && item.sr <= 25488) {
+                    item.poll = "Polling Center 11 Shahuwadi Sarud College"
+                }
+                else if (item.sr > 25488 && item.sr <= 26705) {
+                    item.poll = "Polling Center 12 Sangli Willingdon College"
+                }
+                else if (item.sr > 26705 && item.sr <= 27178) {
+                    item.poll = "Polling Center 13 Sangli Walchand College"
+                }
+                else if (item.sr > 27178 && item.sr <= 27916) {
+                    item.poll = "Polling Center 14 Miraj Salunkhe College"
+                }
+                else if (item.sr > 27916 && item.sr <= 29028) {
+                    item.poll = "Polling Center 15 Islampur Bhauraw Patil College"
+                }
+                else if (item.sr > 29028 && item.sr <= 30225) {
+                    item.poll = "Polling Center 16 Islampur Rajarambapu College"
+                }
+                else if (item.sr > 30225 && item.sr <= 30502) {
+                    item.poll = "Polling Center 17 Tasgaon Vasantraodada Patil College"
+                }
+                else if (item.sr > 30502 && item.sr <= 31462) {
+                    item.poll = "Polling Center 18 Vita Balwant College"
+                }
+                else if (item.sr > 31462 && item.sr <= 32352) {
+                    item.poll = "Polling Center 19 Ramanandnagar Patangrao Kadam College"
+                }
+                else if (item.sr > 32352 && item.sr <= 32439) {
+                    item.poll = "Polling Center 20 Jath Raje Ramrao College"
+                }
+                else if (item.sr > 32439 && item.sr <= 32801) {
+                    item.poll = "Polling Center 21 Atpadi SB Deshmukh College"
+                }
+                else if (item.sr > 32801 && item.sr <= 33129) {
+                    item.poll = "Polling Center 22 Kavathe-Mahankal Vasantraodada Patil College"
+                }
+                else if (item.sr > 33129 && item.sr <= 33744) {
+                    item.poll = "Polling Center 23 Satara Shivaji College"
+                }
+                else if (item.sr > 33744 && item.sr <= 34014) {
+                    item.poll = "Polling Center 24 Satara Lal Bahadur Shastri College"
+                }
+                else if (item.sr > 34014 && item.sr <= 34305) {
+                    item.poll = "Polling Center 25 Karad Gadage Maharaj College"
+                }
+                else if (item.sr > 34305 && item.sr <= 34518) {
+                    item.poll = "Polling Center 26 Karad Mahila College"
+                }
+                else if (item.sr > 34518 && item.sr <= 34754) {
+                    item.poll = "Polling Center 27 Phaltan Mudhoji College"
+                }
+                else if (item.sr > 34754 && item.sr <= 34949) {
+                    item.poll = "Polling Center 28 Wai Kisan Veer College"
+                }
+                else if (item.sr > 34949 && item.sr <= 35108) {
+                    item.poll = "Polling Center 29 Dahiwadi Dahiwadi College"
+                }
+                else if (item.sr > 35108 && item.sr <= 35348) {
+                    item.poll = "Polling Center 30 Koregaon D.P.Bhosale College"
+                }
+                else if (item.sr > 35348 && item.sr <= 35518) {
+                    item.poll = "Polling Center 31 Patan Balasahab Desai College"
+                }
+                else if (item.sr > 35518 && item.sr <= 35532) {
+                    item.poll = "Polling Center 32 Lonand Sharadchandra Pawar College"
+                }
+                else if (item.sr > 35532 && item.sr <= 36343) {
+                    item.poll = "Polling Center 33 Khatav Shahajiraje College"
+                }
 
                 items.push(item)
 
@@ -78,11 +181,11 @@
 </head>
 
 <body>
-    <h1 style="background-color:lightgrey; padding:10px; text-align:center; margin-bottom: 40px;">List of Graduates</h1>
+    <h1 style="background-color:lightgrey; padding:10px; text-align:center; margin :auto">VIDYAPITH VIKAS MANCH SHIVAJI VIDYAPITH, KOLHAPUR</h1>
     <form name="myform" style="width:80%; margin: auto;" onsubmit="search();return false;">
-        <div class="mb-3">
-            <input name="name" style="border-radius:20px; margin:auto;" type="text" class="form-control" id="name" placeholder="Name"
-                aria-describedby="emailHelp">
+        <div class="mb-3" style="padding:10px">
+            <input name="name" style="border-radius:20px; margin:auto;" type="text" class="form-control" id="name"
+                placeholder="Name" aria-describedby="emailHelp">
         </div>
         <button style="display:block; margin:auto;" type="submit" class="btn btn-primary">Check</button>
         <h1 id="res"></h1>
@@ -96,10 +199,12 @@
                 <th>Sr No.</th>
                 <th>Name</th>
                 <th>Address</th>
+                <th>Polling Center</th>
             </tr>
         </thead>
         <tbody id="testBody"></tbody>
     </table>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
